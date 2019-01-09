@@ -1,5 +1,5 @@
 git cmd line helper.  youtube tutorial: Git Tutorial for Beginners: Command-Line Fundamentals. https://www.youtube.com/watch?v=HVsySz-h9r4
-
+1) basics:
 git --version gives version/confirm git loaded in cli properly
 
 ls -la to see files in current dir
@@ -27,7 +27,7 @@ git branch -a 	-lists branches
 git branch 		-no switches will list the branch and the branch you are on will have asterisk.
 git diff
 
-Combined cli cmnds:
+2) Combined cli cmnds:
 changed file code, ready to commit, sequence in cli:  add, commit -m "[add message]"
 then if have remote: add, commit, pull origin master, push origin master  
 	-are doing the pull first in shared codebase because others may have changed other pices of code in interim.  have to do that before your push.
