@@ -1,0 +1,42 @@
+git cmd line helper.  youtube tutorial: Git Tutorial for Beginners: Command-Line Fundamentals. https://www.youtube.com/watch?v=HVsySz-h9r4
+
+git --version gives version/confirm git loaded in cli properly
+
+ls -la to see files in current dir
+	MS: ls is unix.  equiv for MS is dir
+
+git init 	-places a project you are cd'd to under version control.  cd to dir you want to git and type this command.  
+	use rm -rf .git - to remove from version control
+
+git status 	-when cd'ed to git projec this cmd lists git attributes
+
+touch .gitignore to create a git ignore file for preference/local attr/bin/compile type files
+	-MS: touch is unix.  MS equiv for dir is mkdir.  equiv for file is echo.> [filename]  --or-- type nul > [filename]
+
+git add -A |[filename]-adds all untracked files into staged files for commit.  all = all or by filename.  Stages file ready for commit
+	git reset [filename] - removes file from version tracking
+	
+git commit -m "add a message about the change" -commits
+
+git log 	-log of changes
+
+git clone [url] [where to clone repo] - use . for dest if you already cd'ed to dir for files in project to be cloned.  creates a new copy into your specified dir.
+
+git remote -v 	-get remote info.  switch is listing origin info
+git branch -a 	-lists branches
+git branch 		-no switches will list the branch and the branch you are on will have asterisk.
+git diff
+
+Combined cli cmnds:
+changed file code, ready to commit, sequence in cli:  add, commit -m "[add message]"
+then if have remote: add, commit, pull origin master, push origin master  
+	-are doing the pull first in shared codebase because others may have changed other pices of code in interim.  have to do that before your push.
+
+establish new Branch for new code functionality.  Should not normally be working on master itself.
+git branch [name]
+git checkout [name]
+	...make changes
+git add -A
+git commit -m ""
+git push -u origin [name] 	-establishes new branch in remote repo
+git branch -a
