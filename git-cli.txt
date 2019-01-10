@@ -13,8 +13,8 @@ git status 	-when cd'ed to git projec this cmd lists git attributes
 touch .gitignore to create a git ignore file for preference/local attr/bin/compile type files
 	-MS: touch is unix.  MS equiv for dir is mkdir.  equiv for file is echo.> [filename]  --or-- type nul > [filename]
 
-git add -A |[filename]	-adds all untracked files into staged files for commit.  all = all or by filename.  Stages file ready for commit
-git reset [filename] 	-removes file from version tracking.  w/o filename it will untrack everything in dir
+git add -A |[filename]	-adds/stages all untracked files into staged files, ready for commit.  A = all or by filename.
+git reset [filename] 	-unstages file.  w/o filename it will unstage everything in dir
 	
 git commit -m "add a message about the change" 	-commits changes
 
@@ -34,15 +34,21 @@ then if have remote: add, commit, pull origin master, push origin master
 	-are doing the pull first in shared codebase because others may have changed other pices of code in interim.  have to do that before your push.
 	-branch- note that master above- 2nd switch is the branch name.  master is used here but normal flow of work is to a branch
 
-2.2) New Branch.  Establish new Branch for new code functionality.  Should not normally be working on master itself.
-git branch [name]
-git checkout [name]	-checks out new branch so you are working on that instead of master
+2.2) New Branch, then merge post testing.  Establish new Branch for new code functionality.  Should not normally be working on master itself.
+git branch [branch-name].  Overview of steps: branch create,checkout,add,commit,pull/push,tests done,checkout master, merge, delete branch
+git checkout [branch-name]	-checks out new branch so you are working on that instead of master
 	...make changes
 git add -A
 git commit -m ""
-git push -u origin [name] 	-establishes new branch in remote repo
+git push -u origin [branch-name] 		-establishes new branch in remote repo.  can remove -u switch on future pushes after branch is already created.
 git branch -a
-
+ **after tested and ready to merge to master
+git checkout master
+git merge [branch name]
+git log
+git branch -d [branch-name]				-to delete local branch
+git push origin --delete [branch-name] 	-if pushed to remote- delete that to once all changes merged to master
+git status
 
 3) GitHub- establishing new remote for your local project
 git remote add origin [url] 	-this creates a new repo cnx w/ locally and w/ a name of your choosing and establishes a remote origin on that repo.
