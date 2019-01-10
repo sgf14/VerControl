@@ -1,0 +1,1 @@
+See STS Github README for specifics about git process.  IDE process is slightly different than CLI
