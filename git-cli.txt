@@ -39,7 +39,7 @@ git branch [branch-name].  Overview of steps: branch create,checkout,add,commit,
 git checkout [branch-name]	-checks out new branch so you are working on that instead of master
 	...make changes
 git add -A
-git commit -m ""
+git commit -m "[detailed note about change]"
 git push -u origin [branch-name] 		-establishes new branch in remote repo.  can remove -u switch on future pushes after branch is already created.
 git branch -a
  **after tested and ready to merge to master
