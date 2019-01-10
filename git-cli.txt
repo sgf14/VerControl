@@ -13,17 +13,17 @@ git status 	-when cd'ed to git projec this cmd lists git attributes
 touch .gitignore to create a git ignore file for preference/local attr/bin/compile type files
 	-MS: touch is unix.  MS equiv for dir is mkdir.  equiv for file is echo.> [filename]  --or-- type nul > [filename]
 
-git add -A |[filename]-adds all untracked files into staged files for commit.  all = all or by filename.  Stages file ready for commit
-	git reset [filename] - removes file from version tracking
+git add -A |[filename]	-adds all untracked files into staged files for commit.  all = all or by filename.  Stages file ready for commit
+git reset [filename] 	-removes file from version tracking.  w/o filename it will untrack everything in dir
 	
-git commit -m "add a message about the change" -commits
+git commit -m "add a message about the change" 	-commits changes
 
 git log 	-log of changes
 
 git clone [url] [where to clone repo] - use . for dest if you already cd'ed to dir for files in project to be cloned.  creates a new copy into your specified dir.
 
-git remote -v 	-get remote info.  switch is listing origin info
-git branch -a 	-lists branches
+git remote -v 	-get remote info.  switch is listing origin info.  See below if entirely new remote [github]
+git branch -a 	-lists all branches
 git branch 		-no switches will list the branch and the branch you are on will have asterisk.
 git diff
 
@@ -39,4 +39,13 @@ git checkout [name]
 git add -A
 git commit -m ""
 git push -u origin [name] 	-establishes new branch in remote repo
+git branch -a
+
+3) GitHub- establishing new remote for your local project
+git remote add origin [url] 	-this creates a new repo cnx w/ locally and w/ a name of your choosing and establishes a remote origin on that repo.
+	url format: https://github.com/user/repo.git
+	ie: git remote add origin https://github.com/sgf14/VerControl.git
+-instantiate repository in github.  Note the above only registers on local it doesnt instantiate it in github itself.  make sure you are using the same repo name.
+git remote -v 	-to see new remote attr [but local assigned version only for the moment]
+git push -u origin master	-this pushes local to github
 git branch -a
