@@ -8,7 +8,7 @@ ls -la to see files in current dir
 git init 	-places a project you are cd'd to under version control.  cd to dir you want to git and type this command.  
 	use rm -rf .git - to remove from version control
 
-git status 	-when cd'ed to git projec this cmd lists git attributes
+git status 	-when cd'ed to git project this cmd lists git attributes
 
 touch .gitignore to create a git ignore file for preference/local attr/bin/compile type files
 	-MS: touch is unix.  MS equiv for dir is mkdir.  equiv for file is echo.> [filename]  --or-- type nul > [filename]
