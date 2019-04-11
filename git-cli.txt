@@ -1,5 +1,5 @@
 git cmd line helper.  youtube tutorial: Git Tutorial for Beginners: Command-Line Fundamentals. https://www.youtube.com/watch?v=HVsySz-h9r4
-1) basics:
+1) basic commands:
 git --version gives version/confirm git loaded in cli properly
 
 ls -la to see files in current dir
