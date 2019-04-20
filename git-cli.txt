@@ -14,11 +14,14 @@ touch .gitignore to create a git ignore file for preference/local attr/bin/compi
 	-MS: touch is unix.  MS equiv for dir is mkdir.  equiv for file is echo.> [filename]  --or-- type nul > [filename]
 
 git add -A |[filename]	-adds/stages all untracked files into staged files, ready for commit.  A = all or by filename.
+git rm  -removal vs add.  Note in practice [if removal is needed] you normally just remove a file in Explorer/Finder, 
+         then cmd = git commit -a -m
+         that will remove the files/folder in git and when pushed from git hub also.
 git reset [filename] 	-unstages file.  w/o filename it will unstage everything in dir
 	
 git commit -m "add a message about the change" 	-commits changes
 
-git log 	-log of changes
+git log 	-log of changes.  type 'q' to exit back to cmd line.
 
 git clone [url] [where to clone repo] - use . for dest if you already cd'ed to dir for files in project to be cloned.  creates a new copy into your specified dir.
 
