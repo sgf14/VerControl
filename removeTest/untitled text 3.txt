@@ -1,4 +1,0 @@
-git and giit hub repo test of file and folder removal.
-for comparison to CVS method.  CVS left removed folder in the repo.
-see git repo for comparison of this removal process.  Removed 'Test' folder 
-is gone.
