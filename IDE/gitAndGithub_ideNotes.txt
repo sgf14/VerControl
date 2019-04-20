@@ -1,0 +1,63 @@
+Git/Github within an IDE Notes
+
+Specific to eclipse for now.
+
+putting a project under version control within an IDE requires a little thought.
+project = project in IDE
+repo/repository = the git and GitHub repository that the project is stored in.
+
+general creation process- git local
+1. purpose: this gets project under version control in local
+2. in IDE create a new project
+3. in IDE setup a new repo
+    1. open window\show view\git\repositories- new tab in bottom
+4. in cli- under base repo dir add a .gitignore file with at least bin [for java 
+projects].  and probably build and target to.  don’t put class/compiled/derived 
+files under version control- only source files.
+5. in IDE open git staging view
+    1. open windows\show view\git\staging- new tab in bottom
+6. do initial commit with note
+7. concern: duplicate dir:  repo and project name being the same creates a double 
+directory- one after the other.  I feel this is not right, but otherwise I am jamming 
+multiple projects into one repo.  still have some learning to do here.  Other projects I 
+see online are not doing the setup this way, but haven’t figured it out yet.
+
+general share process- GitHub
+1. purpose: this shares local project online at GitHub
+2. open local GitHub app [on desktop]
+3. from main screen elect add new local repo
+    1. this process will create the origin alias over to a newly created url in GitHub 
+    to this new repo.  per double dir note above- select the first project name [this 
+    is the repo with the .git folder]
+4. Once created this brings you into the project on the desktop app
+5. it will also create a new repo on GitHub web
+6. back in Eclipse.  make a change and commit and push.  it will require you to log 
+into the GitHub account, but otherwise the push should then update the remote.
+
+general dev process- ongoing maintenance and development
+1. purpose: this is normal development steps after project is under version control.  
+ongoing maintenance and development process.
+2. xx
+
+
+helpful links:
+https://www.vogella.com/tutorials/EclipseGit/article.html#egitconfiguration_defaultlocation
+
+
+Details
+repo concept.  you can put multiple projects in a repo.  However, if you do this then if 
+you decide to share the project on GitHub all the projects in that repos are combined 
+together under single version control.  More likely you want them as independent 
+projects in there own repo, with their own history and tracking.  To do this you need 
+to setup one repo per project.
+
+.git folder in base. this is what makes a repo a repo, this hidden folder is where all 
+the version control and project history resides.
+
+
+GitHub desktop view:
+note that the project you established will be the default repo that opens up any time 
+you re-open the desktop version.  To see other repos you can click the down button 
+next to Add- and you can clone any one of the remote repos from there to your local 
+instance.  you can also do this type of step in the IDE itself using the clone and/or 
+download type function from GitHub to local.

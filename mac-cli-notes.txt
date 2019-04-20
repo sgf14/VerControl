@@ -1,0 +1,25 @@
+This is a copy of Mac Notes App file
+Install git
+
+Note on a mac git is already installed [\usr\bin\git].  No new install is really needed.
+in bash type git —version to confirm.
+
+help file:  note in my git hub account already have detailed instructions.  Not duplicating all that here. just main process.  see VerControl project
+
+bash [outside an ide]:
+1. to place new folder under git version control:
+    1. cd to appropriate folder [created Documents/Coding/GitProjects] for this.
+    2. git init & return. 
+2. clone an online repo
+    1. cd- per above.
+    2. git clone [paste url from git hub].  It goes and gets copy- places in the folder you are cd’ed to.
+3. make local changes and push to remote [don’t make changes direct in master]
+    1. in bash: git branch [new branch name]
+    2. in text wrangler- change/add text file & save
+    3. in bash- git add -A [stages]
+    4. git commit -m “message” [commits]
+    5. git push -u origin [new branch name] you will need to login username and password [havent figured out copy paste password exactly]
+    6. git branch -a [to see branches local and remote]
+
+if you needed to download git go to homebrew and install
+1. ie brew install git
